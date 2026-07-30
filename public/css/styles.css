@@ -22,19 +22,19 @@ body {
   color: #fff;
   font-family: 'Inter', sans-serif;
   margin: 0;
-  padding: 5px 10px;
-  height: 480px;
-  width: 800px;
+  padding: 8px 50px 50px 50px;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   overflow: hidden;
 }
 
 /* ─── HEADER (clock + weather) ─── */
 .header-container {
-  width: 780px;
-  height: 56px;
+  width: 100%;
+  height: 80px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
@@ -43,7 +43,7 @@ body {
 
 .header-clock {
   grid-column: 2;
-  font-size: 2.6rem;
+  font-size: 3.8rem;
   font-weight: 800;
   text-align: center;
   font-variant-numeric: tabular-nums;
@@ -56,31 +56,31 @@ body {
   justify-self: end;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   background: rgba(255, 255, 255, 0.05);
-  padding: 6px 12px;
+  padding: 10px 18px;
   border-radius: 50px;
   border: 1px solid #222;
 }
 
 #w-icon {
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .temp-container {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
 }
 
 .temp-primary {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
 }
 
 .temp-secondary {
   color: #444;
-  font-size: 0.7rem;
+  font-size: 0.95rem;
 }
 
 /* Dimmed Fahrenheit */
@@ -88,20 +88,20 @@ body {
 .weather-details {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
   border-left: 1px solid #333;
-  padding-left: 10px;
+  padding-left: 14px;
 }
 
 .weather-condition {
-  font-size: 0.68rem;
+  font-size: 0.95rem;
   color: #fff;
   font-weight: 600;
 }
 
 /* Bright like temp */
 .weather-wind {
-  font-size: 0.62rem;
+  font-size: 0.85rem;
   color: #fff;
   font-weight: 500;
 }
@@ -114,18 +114,18 @@ body {
   justify-self: start;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 /* Each glance-item is hidden by default, shown via JS */
 .glance-item {
   display: none;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
   background: rgba(255, 59, 48, 0.12);
   border: 1px solid rgba(255, 59, 48, 0.45);
-  border-radius: 6px;
-  padding: 3px 7px 3px 4px;
+  border-radius: 8px;
+  padding: 5px 10px 5px 6px;
   animation: glancePulse 2s ease-in-out infinite;
 }
 
@@ -135,12 +135,12 @@ body {
 
 /* Route circle — colour set inline by JS */
 .glance-route {
-  font-size: 0.68rem;
+  font-size: 0.9rem;
   font-weight: 800;
   color: #fff;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,7 +148,7 @@ body {
 }
 
 .glance-label {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--safety-red);
   text-transform: uppercase;
@@ -171,8 +171,8 @@ body {
 .dashboard {
   display: flex;
   flex-direction: row;
-  gap: 12px;
-  width: 780px;
+  gap: 16px;
+  width: 100%;
   flex: 1;
   /* fills remaining space */
   justify-content: center;
@@ -182,8 +182,8 @@ body {
 
 .card {
   background: var(--card-bg);
-  border-radius: 18px;
-  padding: 14px;
+  border-radius: 24px;
+  padding: 22px;
   flex: 1;
   border: 2px solid #222;
   display: flex;
@@ -222,17 +222,17 @@ body {
 .card-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .route-circle {
-  width: 42px;
-  height: 42px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 800;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -248,24 +248,24 @@ body {
 }
 
 .station-name {
-  font-size: 1.25rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: -0.04em;
 }
 
 .label {
   color: #555;
-  font-size: 0.72rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
 }
 
 .action-text {
-  font-size: 1.55rem;
+  font-size: 2.3rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .action-text.green-text {
@@ -284,11 +284,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .value-text {
-  font-size: 1.05rem;
+  font-size: 1.45rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
@@ -299,30 +299,30 @@ body {
 }
 
 .wall-eta {
-  font-size: 0.82rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #666;
 }
 
 .next-box {
   background: rgba(255, 255, 255, 0.03);
-  padding: 7px 10px;
-  border-radius: 10px;
-  margin-top: 6px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  margin-top: 10px;
 }
 
 .next-row {
-  font-size: 0.82rem;
+  font-size: 1.1rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   color: #aaa;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 /* ─── SCROLLING TICKER ─── */
 .ticker-wrap {
-  width: 780px;
-  height: 22px;
+  width: 100%;
+  height: 32px;
   overflow: hidden;
   flex-shrink: 0;
   position: relative;
@@ -367,9 +367,9 @@ body {
 .ticker-seg {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 0 24px;
-  font-size: 0.62rem;
+  gap: 8px;
+  padding: 0 32px;
+  font-size: 0.88rem;
   font-weight: 600;
   color: #888;
   flex-shrink: 0;
@@ -379,21 +379,21 @@ body {
   background: var(--safety-red);
   color: #fff;
   font-weight: 800;
-  font-size: 0.6rem;
-  padding: 1px 5px;
-  border-radius: 3px;
+  font-size: 0.82rem;
+  padding: 2px 7px;
+  border-radius: 4px;
   flex-shrink: 0;
 }
 
 .ticker-seg .ticker-dot {
   color: #333;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 
 /* ─── FOOTER ─── */
 .footer {
-  width: 780px;
-  height: 48px;
+  width: 100%;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -407,17 +407,17 @@ body {
 }
 
 .heartbeat-dot {
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--success-green);
-  box-shadow: 0 0 6px var(--success-green);
+  box-shadow: 0 0 8px var(--success-green);
   animation: heartbeat 2s infinite;
 }
 
 .heartbeat-dot.error {
   background: var(--safety-red);
-  box-shadow: 0 0 6px var(--safety-red);
+  box-shadow: 0 0 8px var(--safety-red);
   animation: errorPulse 1s infinite;
 }
 
@@ -446,8 +446,8 @@ body {
 }
 
 .motion-dot {
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #111;
   transition: all 0.3s ease;
@@ -455,7 +455,7 @@ body {
 
 .motion-dot.active {
   background: var(--motion-blue);
-  box-shadow: 0 0 12px var(--motion-blue);
+  box-shadow: 0 0 16px var(--motion-blue);
   animation: bluePulse 1.5s infinite ease-in-out;
 }
 
@@ -477,7 +477,7 @@ body {
 }
 
 .mta-status {
-  font-size: 0.62rem;
+  font-size: 0.85rem;
   color: #555;
   font-family: monospace;
   letter-spacing: 1px;
@@ -490,19 +490,19 @@ body {
 
 .trash-indicator {
   display: none;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #bbb;
   font-weight: 600;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 8px 16px;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
 .trash-indicator.urgent {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   color: #fff;
   background: rgba(255, 180, 0, 0.15);
   border-color: rgba(255, 180, 0, 0.5);
@@ -521,7 +521,7 @@ body {
 }
 
 .ip-text {
-  font-size: 0.62rem;
+  font-size: 0.82rem;
   color: #444;
   font-family: monospace;
 }
